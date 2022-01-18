@@ -1,0 +1,21 @@
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+
+        val Winelist = arrayListOf(
+            Wines(R.drawable.wine2, "와인샘플", "WineSample", price = "100,000원"),
+            Wines(R.drawable.t50_3071_03, "와인샘플", "WineSample", price = "600,000원"),
+            Wines(R.drawable.wine1, "와인샘플", "WineSample",price = "100,000원")
+
+        )
+
+
+        rv_wine.layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        rv_wine.setHasFixedSize(true)
+        rv_wine.adapter = WineAdapter(WineList) /* id 잡는거 에러
+    }
+}
